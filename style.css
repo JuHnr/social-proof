@@ -1,0 +1,224 @@
+:root
+{
+  --primary: hsl(300, 43%, 22%);
+  --status: hsl(333, 80%, 67%);
+  --secondary: hsl(303, 10%, 53%);
+  --gray: hsl(300, 24%, 96%);
+}  
+
+
+
+body
+{
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  background-color: white;
+  background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  padding: 8% 10%;
+}
+
+h1
+{
+  color: var(--primary);
+  font-size: 4em;
+}
+
+h2
+{
+  color: var(--primary);
+  font-size: 1em;
+  padding-left: 25px;
+}
+
+.heading p
+{
+  color: var(--secondary);
+  line-height: 2em;
+}
+
+
+.rate
+{
+   background-color: var(--gray);
+   border-radius: 10px;
+   padding: 10px 30px;
+   display: flex;
+   align-items: center;
+   margin: 15px 0px;
+}
+
+.rate .star
+{
+  flex-shrink: 0;
+}
+
+
+.card
+{
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-img
+{
+  border-radius: 50%;
+  height: 40px;
+  width: auto;
+}
+
+.card-top
+{
+  display: flex;
+}
+
+.name
+{
+   margin-left: 22px;
+   color: white;
+   font-weight: 600;
+}
+
+.name p
+{
+  margin: 0;
+}
+
+.status
+{
+  color: var(--status);
+  font-weight: 500;
+  padding-top: 5px;
+}
+
+.quote
+{
+  color: var(--gray);
+  line-height: 1.7em;
+  padding-top: 15px;
+  font-size: 0.95em;
+}
+
+
+.one
+{
+  margin-bottom: 40px;
+}
+.two 
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.three
+{
+  margin-top: 40px;
+}
+
+.rate.first
+{
+  margin-right: 80px;
+}
+.rate.second
+{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.rate.third
+{
+  margin-left: 80px;
+}
+
+
+
+
+
+/*grid*/
+
+.container
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 100px;
+  row-gap: 80px;
+  align-items: center ;
+}
+
+.heading
+{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.rates
+{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.testimony
+{
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr;
+  column-gap: 35px;
+}
+
+
+@media all and (max-width: 991px)
+{
+  .container
+  {
+    display: inline;
+  }
+
+  .rate
+  {
+    flex-direction: column;
+  }
+
+  .one, .two, .three
+  {
+  margin: 0;
+  }
+  .rate.first, .rate.second, .rate.third
+  {
+  margin: 15px 0
+  }
+
+  .testimony
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card
+  {
+    margin-top: 15px;
+  }
+
+  .heading
+  {
+    text-align: center;
+  }
+
+  h1
+  {
+    font-size: 3em;
+  }
+
+  body
+  {
+  background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  }
+}
