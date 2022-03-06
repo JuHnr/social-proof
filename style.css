@@ -19,6 +19,7 @@ body
   padding: 8% 10%;
 }
 
+
 h1
 {
   color: var(--primary);
@@ -146,8 +147,9 @@ h2
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: 100px;
-  row-gap: 80px;
+  row-gap: 50px;
   align-items: center ;
+  width: 100%;
 }
 
 .heading
